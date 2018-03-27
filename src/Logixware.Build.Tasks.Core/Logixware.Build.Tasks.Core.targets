@@ -3,13 +3,13 @@
 
   <PropertyGroup>
     <LogixwareBuildTasksCorePath Condition="'$(LogixwareBuildTasksCorePath)' == '' and '$(MSBuildThisFile)' == 'Logixware.Build.Tasks.Core.targets'">$(MSBuildThisFileDirectory)</LogixwareBuildTasksCorePath>
-    <LogixwareBuildTasksCoreLib Condition="'$(OS)' == 'Windows_NT'">$([MSBUILD]::Unescape($(LogixwareBuildTasksCorePath)\Logixware.Build.Tasks.Core.dll))</LogixwareBuildTasksCoreLib>
-    <LogixwareBuildTasksCoreLib Condition="'$(OS)' != 'Windows_NT'">$(LogixwareBuildTasksCorePath)\Logixware.Build.Tasks.Core.dll</LogixwareBuildTasksCoreLib>
+    <LogixwareBuildTasksCoreLib Condition="'$(OS)' == 'Windows_NT'">$([MSBUILD]::Unescape($(LogixwareBuildTasksCorePath)\..\lib\netstandard2.0\Logixware.Build.Tasks.Core.dll))</LogixwareBuildTasksCoreLib>
+    <LogixwareBuildTasksCoreLib Condition="'$(OS)' != 'Windows_NT'">$(LogixwareBuildTasksCorePath)\..\lib\netstandard2.0\Logixware.Build.Tasks.Core.dll</LogixwareBuildTasksCoreLib>
     <LogixwareBuildTasksCoreLib Condition="!Exists('$(LogixwareBuildTasksCoreLib)')">Logixware.Build.Tasks.Core.dll</LogixwareBuildTasksCoreLib>
   </PropertyGroup>
 
   <UsingTask AssemblyFile="$(LogixwareBuildTasksCoreLib)" TaskName="Logixware.Build.Tasks.Core.AssemblyInfo" />
-	<UsingTask AssemblyFile="$(LogixwareBuildTasksCoreLib)" TaskName="Logixware.Build.Tasks.Core.Time" />
-	<UsingTask AssemblyFile="$(LogixwareBuildTasksCoreLib)" TaskName="Logixware.Build.Tasks.Core.Version" />
+  <UsingTask AssemblyFile="$(LogixwareBuildTasksCoreLib)" TaskName="Logixware.Build.Tasks.Core.Time" />
+  <UsingTask AssemblyFile="$(LogixwareBuildTasksCoreLib)" TaskName="Logixware.Build.Tasks.Core.Version" />
 
 </Project>

@@ -10,9 +10,9 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 // [assembly: AssemblyTitle("MSBuild.Community.Tasks")]
 [assembly: System.Reflection.AssemblyCopyright("Copyright © 2008 - 2018 Tobias Punke. All rights reserved.")]
-[assembly: System.Reflection.AssemblyVersion("1.0.0")]
-[assembly: System.Reflection.AssemblyFileVersion("1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersion("1.0.0")]
+// [assembly: System.Reflection.AssemblyVersion("1.0.1")]
+// [assembly: System.Reflection.AssemblyFileVersion("1.0.1")]
+// [assembly: System.Reflection.AssemblyInformationalVersion("1.0.1")]
 [assembly: AssemblyTitle("Logixware© Build Tasks Library")]
 [assembly: AssemblyDescription("Logixware© Build Tasks Library")]
 [assembly: AssemblyCompany("Logixware© Tobias Punke")]

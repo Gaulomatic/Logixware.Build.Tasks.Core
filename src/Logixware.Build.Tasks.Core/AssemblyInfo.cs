@@ -101,7 +101,7 @@ namespace Logixware.Build.Tasks.Core
         private const string CSharp = "CS";
         private const string VisualBasic = "VB";
         private const string CPP = "CPP";
-        private const string FSharp_cl = "FS";
+        // private const string FSharp_cl = "FS";
 
         private const string CppCodeProviderAssembly = "CppCodeProvider, "+
                                                        "Version=8.0.0.0, " +
@@ -151,10 +151,10 @@ namespace Logixware.Build.Tasks.Core
             _codeLangMapping["visual basic"] = VisualBasic;
 
             // F#
-            _codeLangMapping["fsharp"] = FSharp_cl;
-            _codeLangMapping["fs"] = FSharp_cl;
-            _codeLangMapping["f#"] = FSharp_cl;
-            _codeLangMapping["f sharp"] = FSharp_cl;
+            // _codeLangMapping["fsharp"] = FSharp_cl;
+            // _codeLangMapping["fs"] = FSharp_cl;
+            // _codeLangMapping["f#"] = FSharp_cl;
+            // _codeLangMapping["f sharp"] = FSharp_cl;
 
             // C++/CLI
             _codeLangMapping["cpp"] = CPP;
@@ -592,10 +592,10 @@ namespace Logixware.Build.Tasks.Core
                     provider = new Microsoft.VisualBasic.VBCodeProvider();
                     outputFile = Path.ChangeExtension(outputFile, ".vb");
                     break;
-                case FSharp_cl:
-                    provider = new FSharp.Compiler.CodeDom.FSharpCodeProvider();
-                    outputFile = Path.ChangeExtension(outputFile, ".fs");
-                    break;
+                // case FSharp_cl:
+                //     provider = new FSharp.Compiler.CodeDom.FSharpCodeProvider();
+                //     outputFile = Path.ChangeExtension(outputFile, ".fs");
+                //     break;
                 case CPP:
                     // We load the CppCodeProvider via reflection since a hard reference would
                     // require client machines to have the provider installed just to run the task.
