@@ -1,0 +1,62 @@
+
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<Deterministic>false</Deterministic>
+		<RootNamespace>Logixware.Build.Tasks.Core</RootNamespace>
+		<GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+		<GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+		<GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyTrademarkAttribute>false</GenerateAssemblyTrademarkAttribute>
+		<GenerateAssemblyCultureAttribute>false</GenerateAssemblyCultureAttribute>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyGuidAttribute>false</GenerateAssemblyGuidAttribute>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<NoWarn>NU1701,CS0168</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Build.Framework" Version="15.6.82" />
+		<PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.6.82" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.CodeDom" Version="4.4.0" />
+		<PackageReference Include="FSharp.Compiler.CodeDom" Version="1.0.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+
+		<Content Include="bin\Release\netstandard2.0\FSharp.Compiler.CodeDom.dll">
+			<Pack>true</Pack>
+			<PackagePath>lib\netstandard2.0</PackagePath>
+		</Content>
+
+		<Content Include="bin\Release\netstandard2.0\System.CodeDom.dll">
+			<Pack>true</Pack>
+			<PackagePath>lib\netstandard2.0</PackagePath>
+		</Content>
+
+		<Content Include="Logixware.Build.Tasks.Core.targets">
+			<Pack>true</Pack>
+			<PackagePath>lib\netstandard2.0</PackagePath>
+		</Content>
+
+	</ItemGroup>
+
+	<!-- <ItemGroup>
+
+		<None Include="bin/Release/netstandard2.0/FSharp.Compiler.CodeDom.dll" Pack="true" PackagePath="lib\FSharp.Compiler.CodeDom.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<Include Include="bin/Release/netstandard2.0/FSharp.Compiler.CodeDom.dll" />
+	</ItemGroup> -->
+
+</Project>

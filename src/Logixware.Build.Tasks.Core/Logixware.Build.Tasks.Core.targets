@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <LogixwareBuildTasksCorePath Condition="'$(LogixwareBuildTasksCorePath)' == '' and '$(MSBuildThisFile)' == 'Logixware.Build.Tasks.Core.targets'">$(MSBuildThisFileDirectory)</LogixwareBuildTasksCorePath>
+    <LogixwareBuildTasksCoreLib Condition="'$(OS)' == 'Windows_NT'">$([MSBUILD]::Unescape($(LogixwareBuildTasksCorePath)\Logixware.Build.Tasks.Core.dll))</LogixwareBuildTasksCoreLib>
+    <LogixwareBuildTasksCoreLib Condition="'$(OS)' != 'Windows_NT'">$(LogixwareBuildTasksCorePath)\Logixware.Build.Tasks.Core.dll</LogixwareBuildTasksCoreLib>
+    <LogixwareBuildTasksCoreLib Condition="!Exists('$(LogixwareBuildTasksCoreLib)')">Logixware.Build.Tasks.Core.dll</LogixwareBuildTasksCoreLib>
+  </PropertyGroup>
+
+  <UsingTask AssemblyFile="$(LogixwareBuildTasksCoreLib)" TaskName="Logixware.Build.Tasks.Core.AssemblyInfo" />
+	<UsingTask AssemblyFile="$(LogixwareBuildTasksCoreLib)" TaskName="Logixware.Build.Tasks.Core.Time" />
+	<UsingTask AssemblyFile="$(LogixwareBuildTasksCoreLib)" TaskName="Logixware.Build.Tasks.Core.Version" />
+
+</Project>
