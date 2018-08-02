@@ -16,19 +16,19 @@
 		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
 		<GenerateAssemblyGuidAttribute>false</GenerateAssemblyGuidAttribute>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    	<VersionPrefix>1.0.3</VersionPrefix>
+    	<VersionPrefix>1.0.4</VersionPrefix>
 		<PackageProjectUrl>https://github.com/Gaulomatic/msbuildtasks</PackageProjectUrl>
 		<PackageLicenseUrl>https://github.com/Gaulomatic/msbuildtasks/blob/master/LICENSE</PackageLicenseUrl>
 		<NoWarn>CS0168</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Build.Framework" Version="15.6.82" />
-		<PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.6.82" />
+		<PackageReference Include="Microsoft.Build.Framework" Version="15.7.179" />
+		<PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.7.179" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="System.CodeDom" Version="4.4.0" />
+		<PackageReference Include="System.CodeDom" Version="4.5.0" />
 	</ItemGroup>
 
 	<ItemGroup>
